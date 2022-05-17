@@ -58,7 +58,7 @@ const Prompt = () => {
 
 const PromptContainer = styled.main`
   width: 50vw;
-  margin: auto;
+  margin: 50px auto;
   color: #36454f;
   @media (max-width: 600px) {
     width: 85vw;
