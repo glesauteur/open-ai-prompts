@@ -69,7 +69,7 @@ const PromptContainer = styled.main`
   width: 50%;
   margin: auto;
   color: #36454f;
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 600px) {
     width: 90%;
   }
 `;
