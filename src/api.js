@@ -1,4 +1,4 @@
-const getAnswer = async (prompt) => {
+const getAnswer = async (prompt, engine) => {
   const promptData = {
     prompt: prompt,
     temperature: 0.5,
@@ -9,7 +9,7 @@ const getAnswer = async (prompt) => {
   };
 
   const response = await fetch(
-    "https://api.openai.com/v1/engines/text-curie-001/completions",
+    `https://api.openai.com/v1/engines/${engine}/completions`,
     {
       method: "POST",
       headers: {
@@ -24,4 +24,18 @@ const getAnswer = async (prompt) => {
   return data;
 };
 
-export { getAnswer };
+const getEngineList = async () => {
+  const response = await fetch("https://api.openai.com/v1/engines", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.REACT_APP_OPEN_AI_TOKEN}`,
+    },
+  });
+
+  const data = await response.json();
+
+  return data;
+};
+
+export { getAnswer, getEngineList };

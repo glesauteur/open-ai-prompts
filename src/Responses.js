@@ -13,7 +13,7 @@ const Responses = ({ responses, loading }) => {
           <Result>{res.prompt}</Result>
         </AnswerBoxPrompt>
         <AnswerBoxResult>
-          <Title>Response:</Title>
+          <Title>Response ({res.engine}):</Title>
           <Result>{res.response}</Result>
         </AnswerBoxResult>
       </PromptResponse>
