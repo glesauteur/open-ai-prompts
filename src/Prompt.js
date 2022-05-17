@@ -39,7 +39,7 @@ const Prompt = () => {
   return (
     <PromptContainer>
       <section>
-        <h1>Ask me a question!</h1>
+        <h1>Enter a Prompt!</h1>
         <form>
           <TextArea
             aria-label="Enter a prompt"
