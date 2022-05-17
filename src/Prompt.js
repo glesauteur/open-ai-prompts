@@ -50,27 +50,18 @@ const Prompt = () => {
             Submit
           </Submit>
         </form>
-        {loading && (
-          <Loading>
-            <img src="/loading.svg" alt="loading-spinner" />
-          </Loading>
-        )}
-        <Responses responses={responses} />
+        <Responses loading={loading} responses={responses} />
       </section>
     </PromptContainer>
   );
 };
 
-const Loading = styled.div`
-  text-align: center;
-`;
-
 const PromptContainer = styled.main`
-  width: 50%;
+  width: 50vw;
   margin: auto;
   color: #36454f;
   @media (max-width: 600px) {
-    width: 90%;
+    width: 85vw;
   }
 `;
 

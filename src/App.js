@@ -15,6 +15,11 @@ const AppContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   background-image: linear-gradient(
     170deg,
     hsl(315deg 33% 93%) 0%,

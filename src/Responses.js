@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Responses = ({ responses }) => {
+const Responses = ({ responses, loading }) => {
   const allResponses = responses.map((res, index) => {
     return (
       <PromptResponse key={index}>
@@ -25,10 +25,19 @@ const Responses = ({ responses }) => {
       <div>
         <h2>Responses</h2>
       </div>
+      {loading && (
+        <Loading>
+          <img src="/loading.svg" alt="loading-spinner" />
+        </Loading>
+      )}
       <div>{allResponses}</div>
     </section>
   );
 };
+
+const Loading = styled.div`
+  text-align: center;
+`;
 
 const PromptResponse = styled.article`
   margin: 15px 0px;
